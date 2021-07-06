@@ -38,6 +38,23 @@ class DirectoryList extends Component {
             filteredUsers: filteredUsers
         })
     }
+
+    handleHeader = (event) => {
+        event.preventDefault();
+        const sortByName = this.state.filteredUsers.sort((a, b) => a.name.first > b.name.first ? 1 : -1)
+
+        const reverseSort = sortByName.reverse()
+        switch (this.state.order) {
+            case 'ascend':
+                this.setState({order: 'descend'})
+                this.state.filteredUsers.sort((a, b) => a.name.first > b.name.first ? 1 : -1)
+                break;
+            case 'descend':
+                this.setState({order: 'ascend'})
+                this.state.filteredUsers.sort((a, b) => b.name.first > a.name.first ? 1 : -1)
+        };
+    };
+};
     render() {
         return (
             <div>
