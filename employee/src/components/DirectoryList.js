@@ -2,6 +2,7 @@ import React, {Component} from 'react'
 import API from '../utils/api'
 import EmployeeTable from './EmployeeTable'
 import SearchBox from './SearchBox'
+import Header from './Header'
 
 class DirectoryList extends Component {
     state = {
@@ -60,9 +61,9 @@ class DirectoryList extends Component {
     render() {
         return (
             <div>
-
+            <Header></Header>
             <SearchBox handleChange = {this.handleChange}></SearchBox>
-            <EmployeeTable employees = {this.state.filteredUsers}>
+            <EmployeeTable employees = {this.state.filteredUsers} handleHeader = {this.handleHeader}>
 
             </EmployeeTable>
             </div>

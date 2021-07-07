@@ -1,11 +1,10 @@
 import React from 'react';
 
-const Header = (props) => {
+const Header = () => {
     return (
-        <div>
-            <h1>Employee Directory</h1>
-            <p>Click on each heading to filter or use the search box to narrow your results</p>
-        </div>
+        <header>
+            <h1>Filter by Header</h1>
+        </header>
     )
 }
 

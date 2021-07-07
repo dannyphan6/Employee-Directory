@@ -7,29 +7,32 @@ const EmployeeTable = (props) => {
             <table>
                 <thead>
                     <tr>
-                        <td>
+                        <th>
                             image
-                        </td>
+                        </th>
                     </tr>
                     <tr>
-                        <td>
+                        <th>
+                            <span onClick = {(event) => props.handleHeader(event)}>
+                                Button
+                            </span>
                             name
-                        </td>
+                        </th>
                     </tr>
                     <tr>
-                        <td>
+                        <th>
                             email
-                        </td>
+                        </th>
                     </tr>
                     <tr>
-                        <td>
+                        <th>
                             phone
-                        </td>
+                        </th>
                     </tr>
                     <tr>
-                        <td>
+                        <th>
                             age
-                        </td>
+                        </th>
                     </tr>
                 </thead>
                 <tbody>
