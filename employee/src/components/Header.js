@@ -1,13 +1,17 @@
 import React from 'react';
+import Jumbotron from 'react-bootstrap/Jumbotron'
+import './style.css'
 
 const Header = () => {
     return (
         <header>
-            <div class="jumbotron">
-                <h1 class="display-4">Employee Directory</h1>
-                    <p class="lead">Search for an Employee by name.</p>
-                    <hr class="my-4"></hr>
-            </div>
+            <Jumbotron className='jumbotron'>
+                <h1>Employee Directory</h1>
+                <p>
+                    Search for an employee by name.
+                </p>
+                <hr class="my-4"></hr>
+            </Jumbotron>
         </header>
     )
 }
