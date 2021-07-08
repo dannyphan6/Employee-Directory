@@ -63,9 +63,7 @@ class DirectoryList extends Component {
             <div>
             <Header></Header>
             <SearchBox handleChange = {this.handleChange}></SearchBox>
-            <EmployeeTable employees = {this.state.filteredUsers} handleHeader = {this.handleHeader}>
-
-            </EmployeeTable>
+            <EmployeeTable employees = {this.state.filteredUsers} handleHeader = {this.handleHeader}></EmployeeTable>
             </div>
         )
     }
