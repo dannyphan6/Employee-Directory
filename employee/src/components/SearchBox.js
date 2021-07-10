@@ -2,7 +2,7 @@ import React from 'react';
 
 const SearchBox = (props) => {
     return (
-        <div>
+        <div id='search-box'>
             <input placeholder='Search' onChange = {event => props.handleChange(event)}/>
         </div>
     )

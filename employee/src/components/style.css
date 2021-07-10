@@ -7,8 +7,10 @@
 }
 
 /* Header Component */
-.jumbotron {
+.custom-jumbotron {
     background-color: rgb(11, 11, 99) !important;
+    padding: none !important;
+    margin-bottom: none !important;
 }
 
 h1 {
@@ -30,6 +32,11 @@ p {
 input {
     padding: .75rem;
     margin-top: 1rem;
+    margin-bottom: 1rem;
+}
+
+#search-box {
+    margin-bottom: 2rem;
 }
 /* END */
 
