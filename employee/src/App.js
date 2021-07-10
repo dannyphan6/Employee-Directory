@@ -1,6 +1,6 @@
-import './App.css';
-import DirectoryList from './components/DirectoryList'
-import 'bootstrap/dist/css/bootstrap.min.css';
+import "./App.css";
+import DirectoryList from "./components/DirectoryList";
+import "bootstrap/dist/css/bootstrap.min.css";
 
 function App() {
   return (
@@ -10,6 +10,6 @@ function App() {
       </DirectoryList>
     </div>
   );
-}
+};
 
 export default App;

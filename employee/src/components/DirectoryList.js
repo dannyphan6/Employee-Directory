@@ -1,15 +1,15 @@
-import React, {Component} from 'react'
-import API from '../utils/api'
-import EmployeeTable from './EmployeeTable'
-import SearchBox from './SearchBox'
-import Header from './Header'
+import React, {Component} from "react";
+import API from "../utils/api";
+import EmployeeTable from "./EmployeeTable";
+import SearchBox from "./SearchBox";
+import Header from "./Header";
 
 class DirectoryList extends Component {
     state = {
         users: [],
         filteredUsers: [],
-        order: 'descend'
-    }
+        order: "descend"
+    };
 
     // When page loads, run the function that calls the API
     componentDidMount() {
@@ -17,43 +17,43 @@ class DirectoryList extends Component {
             this.setState({
                 users: res.data.results,
                 filteredUsers: res.data.results
-            })
-        })
-    }
+            });
+        });
+    };
 
     handleChange = (event) => {
         // Value that users entered 
-        const value = event.target.value
+        const value = event.target.value;
 
         // Filters through all users from API call
         const filteredUsers = this.state.users.filter(user => {
             
-            // Taking user input and joining it all together in lowercase in the event that they don't capitalize a employee's name
-            let userValues = Object.values(user).join('').toLowerCase()
+            // Taking user input and joining it all together in lowercase in the event that they don"t capitalize a employee"s name
+            let userValues = Object.values(user).join("").toLowerCase();
 
             // Taking those values and checking to see if that data exists in the API call
-            // If values exist in the API call, then the array has an index IF NOT then data doesn't exist in array
-            return userValues.indexOf(value.toLowerCase()) !== -1
-        })
+            // If values exist in the API call, then the array has an index IF NOT then data doesn"t exist in array
+            return userValues.indexOf(value.toLowerCase()) !== -1;
+        });
         this.setState({
             filteredUsers: filteredUsers
-        })
-    }
+        });
+    };
 
     handleHeader = (event) => {
         event.preventDefault();
 
         switch (this.state.order) {
-            case 'ascend':
-                this.setState({order: 'descend'});
+            case "ascend":
+                this.setState({order: "descend"});
                 this.state.filteredUsers.sort((a, b) => a.name.first > b.name.first ? 1 : -1
                 );
                 break;
-            case 'descend':
-                this.setState({order: 'ascend'});
+            case "descend":
+                this.setState({order: "ascend"});
                 this.state.filteredUsers.sort((a, b) => b.name.first > a.name.first ? 1 : -1
             );
-        }
+        };
     };
     render() {
         return (
@@ -62,8 +62,8 @@ class DirectoryList extends Component {
             <SearchBox handleChange = {this.handleChange}></SearchBox>
             <EmployeeTable employees = {this.state.filteredUsers} handleHeader = {this.handleHeader}></EmployeeTable>
             </div>
-        )
-    }
-}
+        );
+    };
+};
 
-export default DirectoryList
+export default DirectoryList;
