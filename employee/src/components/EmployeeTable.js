@@ -1,11 +1,11 @@
 import React from 'react';
 import Table from 'react-bootstrap/Table'
-import { IconName } from "react-icons/bs";
+import { BsArrowUpDown } from "react-icons/bs";
 
 const EmployeeTable = (props) => {
     console.log(props);
     return (
-        <div>
+        <div id="font">
             <Table striped bordered hover variant="dark">
                 <thead>
                     <tr>
@@ -14,7 +14,7 @@ const EmployeeTable = (props) => {
                         </th>
                         <th>
                             Name
-                            <span onClick = {(event) => props.handleHeader(event)}><IconName BsArrowUpDown></IconName></span>
+                            <span id="sort-btn"onClick = {(event) => props.handleHeader(event)}><BsArrowUpDown className="fa-4x"></BsArrowUpDown></span>
                         </th>
                         <th>
                             Email
