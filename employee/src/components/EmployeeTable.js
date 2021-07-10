@@ -5,7 +5,7 @@ const EmployeeTable = (props) => {
     console.log(props);
     return (
         <div>
-            <table>
+            <Table>
                 <thead>
                     <tr>
                         <th>
@@ -24,7 +24,7 @@ const EmployeeTable = (props) => {
                             Phone Number
                         </th>
                         <th>
-                            DOB
+                            Age
                         </th>
                     </tr>
                 </thead>
@@ -55,7 +55,7 @@ const EmployeeTable = (props) => {
                 }
                     
                 </tbody>
-            </table>
+            </Table>
         </div>
     )
 }
