@@ -1,4 +1,5 @@
 import React from 'react';
+import Table from 'react-bootstrap/Table'
 
 const EmployeeTable = (props) => {
     console.log(props);
@@ -8,30 +9,22 @@ const EmployeeTable = (props) => {
                 <thead>
                     <tr>
                         <th>
-                            image
+                            Photo
                         </th>
-                    </tr>
-                    <tr>
                         <th>
+                            Name
                             <span onClick = {(event) => props.handleHeader(event)}>
                                 Button
                             </span>
-                            name
                         </th>
-                    </tr>
-                    <tr>
                         <th>
-                            email
+                            Email
                         </th>
-                    </tr>
-                    <tr>
                         <th>
-                            phone
+                            Phone Number
                         </th>
-                    </tr>
-                    <tr>
                         <th>
-                            age
+                            DOB
                         </th>
                     </tr>
                 </thead>
