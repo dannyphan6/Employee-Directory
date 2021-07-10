@@ -5,7 +5,7 @@ const EmployeeTable = (props) => {
     console.log(props);
     return (
         <div>
-            <Table>
+            <Table striped bordered hover variant="dark">
                 <thead>
                     <tr>
                         <th>
