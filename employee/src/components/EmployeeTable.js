@@ -1,5 +1,6 @@
 import React from 'react';
 import Table from 'react-bootstrap/Table'
+import { IconName } from "react-icons/bs";
 
 const EmployeeTable = (props) => {
     console.log(props);
@@ -13,9 +14,7 @@ const EmployeeTable = (props) => {
                         </th>
                         <th>
                             Name
-                            <span onClick = {(event) => props.handleHeader(event)}>
-                                Button
-                            </span>
+                            <span onClick = {(event) => props.handleHeader(event)}><IconName BsArrowUpDown></IconName></span>
                         </th>
                         <th>
                             Email
@@ -33,7 +32,7 @@ const EmployeeTable = (props) => {
                     return (
                     <tr key = {employee.login.uuid}>
                         <td>
-                            <img src={employee.picture.thumbnail} alt='Employee Image'/>
+                            <img src={employee.picture.thumbnail} alt='Employee'/>
                         </td>
                         <td>
                             {employee.name.first} {employee.name.last}
